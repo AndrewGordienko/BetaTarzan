@@ -17,9 +17,7 @@ for i in range(len(lines)):
             q_right = (right_side - _right_side)/90
             q_left = (left_side - _left_side)/90
 
-            motorscaling.write("-" + '\n')
-            motorscaling.write(str(np.concatenate((_right_side, _left_side))) + '\n')
-            motorscaling.write(str(np.concatenate((q_right, q_left))) + '\n')
+            motorscaling.write(str(np.concatenate((_right_side, _left_side, q_right, q_left))) + '\n')
 
         temporary_data = []
     else:
